@@ -1,0 +1,107 @@
+{
+    "Target": "http://skit.ac.in",
+    "Subdomains Found": [
+        "www.skit.ac.in"
+    ],
+    "Hidden Content": [
+        {
+            "path": "/robots.txt",
+            "status_code": 200,
+            "content": "User-agent: *\r\nDisallow:\r\n\r\nSitemap: https://www.skit.ac.in/index.php?option=com_schuweb_sitemap&view=xml&tmpl=component&id=1"
+        },
+        {
+            "path": "/sitemap.xml",
+            "status_code": 200,
+            "content": "<!DOCTYPE html>\n<html xmlns=\"//www.w3.org/1999/xhtml\" xml:lang=\"en-gb\" lang=\"en-gb\" >\n<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta name=\"viewport\" content=\"width=dev"
+        }
+    ],
+    "Directories Found": [
+        {
+            "path": "admin",
+            "status_code": 200
+        },
+        {
+            "path": "login",
+            "status_code": 200
+        },
+        {
+            "path": "test",
+            "status_code": 200
+        },
+        {
+            "path": "backup",
+            "status_code": 200
+        },
+        {
+            "path": "config",
+            "status_code": 200
+        },
+        {
+            "path": "skit",
+            "status_code": 200
+        },
+        {
+            "path": "ac",
+            "status_code": 200
+        },
+        {
+            "path": "in",
+            "status_code": 200
+        }
+    ],
+    "Headers Analysis": {
+        "headers": {
+            "Date": "Thu, 12 Dec 2024 09:17:35 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "167",
+            "Connection": "keep-alive",
+            "Cache-Control": "max-age=3600",
+            "Expires": "Thu, 12 Dec 2024 10:17:35 GMT",
+            "Location": "https://skit.ac.in/",
+            "Report-To": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=nAOtpI9QnRaikeu1lzg1gUslKU6uZKp3j4LiuP%2FaAWJ43kEuyXg4kndvWoGxcb7Y8bsMOxsArWRtB5f7I2Xtxn7MtQixYdQTEa9rx%2B7xKBiRPteWHd9HOGkwbFuW\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+            "NEL": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+            "Vary": "Accept-Encoding",
+            "Server": "cloudflare",
+            "CF-RAY": "8f0c9f4a2bcde161-MRS",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "server-timing": "cfL4;desc=\"?proto=TCP&rtt=182637&min_rtt=182637&rtt_var=91318&sent=1&recv=3&lost=0&retrans=0&sent_bytes=0&recv_bytes=142&delivery_rate=0&cwnd=119&unsent_bytes=0&cid=0000000000000000&ts=0&x=0\""
+        },
+        "recommendations": [
+            "Enable HSTS to enforce HTTPS.",
+            "Add a Content Security Policy to prevent XSS attacks.",
+            "Set X-Frame-Options to SAMEORIGIN to prevent clickjacking."
+        ]
+    },
+    "SQL Injection Vulnerabilities": [],
+    "XSS Vulnerabilities": [],
+    "CSRF Vulnerability": {
+        "url": "http://skit.ac.in",
+        "response": "<!DOCTYPE html>\n<html xmlns=\"//www.w3.org/1999/xhtml\" xml:lang=\"en-gb\" lang=\"en-gb\" >\n<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta name=\"viewport\" content=\"width=dev"
+    },
+    "Path Traversal Vulnerabilities": [
+        {
+            "url": "http://skit.ac.in/../../../../etc/shadow",
+            "payload": "../../../../etc/shadow",
+            "response": "<!DOCTYPE html>\n<html xmlns=\"//www.w3.org/1999/xhtml\" xml:lang=\"en-gb\" lang=\"en-gb\" >\n<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta name=\"viewport\" content=\"width=dev"
+        },
+        {
+            "url": "http://skit.ac.in/../config.yaml",
+            "payload": "../config.yaml",
+            "response": "<!DOCTYPE html>\n<html xmlns=\"//www.w3.org/1999/xhtml\" xml:lang=\"en-gb\" lang=\"en-gb\" >\n<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta name=\"viewport\" content=\"width=dev"
+        }
+    ],
+    "SSRF Vulnerabilities": [],
+    "Suggestions": [
+        "Add Strict-Transport-Security (HSTS) to enforce HTTPS connections.",
+        "Implement Content Security Policy (CSP) to mitigate XSS attacks.",
+        "Configure X-Frame-Options to prevent clickjacking attacks.",
+        "Validate and sanitize all user inputs to prevent SQL Injection.",
+        "Escape output to mitigate XSS vulnerabilities.",
+        "Use DNSSEC to secure DNS records.",
+        "Restrict access to sensitive API endpoints with authentication.",
+        "Avoid exposing hidden files like robots.txt with sensitive paths.",
+        "Log and monitor server responses for anomaly detection.",
+        "Use rate limiting and CAPTCHA to prevent brute-force attacks."
+    ],
+    "Total Time (seconds)": 69.11934781074524
+}

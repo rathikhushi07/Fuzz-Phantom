@@ -1,0 +1,30 @@
+{
+    "Target": "https://testsparker.com/",
+    "Subdomains Found": [
+        "www.testsparker.com"
+    ],
+    "Hidden Content": [],
+    "Directories Found": [],
+    "Headers Analysis": {
+        "headers": {},
+        "recommendations": []
+    },
+    "SQL Injection Vulnerabilities": [],
+    "XSS Vulnerabilities": [],
+    "CSRF Vulnerability": null,
+    "Path Traversal Vulnerabilities": [],
+    "SSRF Vulnerabilities": [],
+    "Suggestions": [
+        "Add Strict-Transport-Security (HSTS) to enforce HTTPS connections.",
+        "Implement Content Security Policy (CSP) to mitigate XSS attacks.",
+        "Configure X-Frame-Options to prevent clickjacking attacks.",
+        "Validate and sanitize all user inputs to prevent SQL Injection.",
+        "Escape output to mitigate XSS vulnerabilities.",
+        "Use DNSSEC to secure DNS records.",
+        "Restrict access to sensitive API endpoints with authentication.",
+        "Avoid exposing hidden files like robots.txt with sensitive paths.",
+        "Log and monitor server responses for anomaly detection.",
+        "Use rate limiting and CAPTCHA to prevent brute-force attacks."
+    ],
+    "Total Time (seconds)": 13.790603160858154
+}

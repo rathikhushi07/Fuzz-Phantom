@@ -1,0 +1,101 @@
+{
+    "Target": "http://aspnet.testsparker.com/Products.aspx",
+    "Subdomains Found": [],
+    "Hidden Content": [
+        {
+            "path": "/robots.txt",
+            "status_code": 200,
+            "content": "\r\n\r\n<!DOCTYPE html>\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head><meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" /><meta charset=\"utf-8\" /><title>\r\n\tBitcoin Web Site\r\n</tit"
+        },
+        {
+            "path": "/sitemap.xml",
+            "status_code": 200,
+            "content": "\r\n\r\n<!DOCTYPE html>\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head><meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" /><meta charset=\"utf-8\" /><title>\r\n\tBitcoin Web Site\r\n</tit"
+        }
+    ],
+    "Directories Found": [
+        {
+            "path": "admin",
+            "status_code": 200
+        },
+        {
+            "path": "login",
+            "status_code": 200
+        },
+        {
+            "path": "test",
+            "status_code": 200
+        },
+        {
+            "path": "backup",
+            "status_code": 200
+        },
+        {
+            "path": "config",
+            "status_code": 200
+        },
+        {
+            "path": "aspnet",
+            "status_code": 200
+        },
+        {
+            "path": "testsparker",
+            "status_code": 200
+        },
+        {
+            "path": "com",
+            "status_code": 200
+        }
+    ],
+    "Headers Analysis": {
+        "headers": {
+            "Cache-Control": "private",
+            "Content-Length": "1599",
+            "Content-Type": "text/html; charset=utf-8",
+            "Content-Encoding": "gzip",
+            "Vary": "Accept-Encoding",
+            "Server": "Microsoft-IIS/8.5",
+            "Set-Cookie": "ASP.NET_SessionId=hjdc0z3t1j5wkjqq0near5qs; path=/; HttpOnly; SameSite=Lax",
+            "X-AspNet-Version": "4.0.30319",
+            "X-Powered-By": "ASP.NET",
+            "Date": "Thu, 12 Dec 2024 05:42:05 GMT"
+        },
+        "recommendations": [
+            "Enable HSTS to enforce HTTPS.",
+            "Add a Content Security Policy to prevent XSS attacks.",
+            "Set X-Frame-Options to SAMEORIGIN to prevent clickjacking."
+        ]
+    },
+    "SQL Injection Vulnerabilities": [],
+    "XSS Vulnerabilities": [],
+    "CSRF Vulnerability": {
+        "url": "http://aspnet.testsparker.com/Products.aspx",
+        "response": "\r\n\r\n<!DOCTYPE html>\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head><meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" /><meta charset=\"utf-8\" /><title>\r\n\tBitcoin Web Site\r\n</tit"
+    },
+    "Path Traversal Vulnerabilities": [
+        {
+            "url": "http://aspnet.testsparker.com/Products.aspx/../../../../etc/shadow",
+            "payload": "../../../../etc/shadow",
+            "response": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"> \n<html xmlns=\"http://www.w3.org/1999/xhtml\"> \n<head> \n<title>IIS 8.5 Detailed Error - 404."
+        },
+        {
+            "url": "http://aspnet.testsparker.com/Products.aspx/../config.yaml",
+            "payload": "../config.yaml",
+            "response": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"> \n<html xmlns=\"http://www.w3.org/1999/xhtml\"> \n<head> \n<title>IIS 8.5 Detailed Error - 404."
+        }
+    ],
+    "SSRF Vulnerabilities": [],
+    "Suggestions": [
+        "Add Strict-Transport-Security (HSTS) to enforce HTTPS connections.",
+        "Implement Content Security Policy (CSP) to mitigate XSS attacks.",
+        "Configure X-Frame-Options to prevent clickjacking attacks.",
+        "Validate and sanitize all user inputs to prevent SQL Injection.",
+        "Escape output to mitigate XSS vulnerabilities.",
+        "Use DNSSEC to secure DNS records.",
+        "Restrict access to sensitive API endpoints with authentication.",
+        "Avoid exposing hidden files like robots.txt with sensitive paths.",
+        "Log and monitor server responses for anomaly detection.",
+        "Use rate limiting and CAPTCHA to prevent brute-force attacks."
+    ],
+    "Total Time (seconds)": 16.3622043132782
+}

@@ -1,0 +1,99 @@
+{
+    "Target": "http://tryhackme.com",
+    "Subdomains Found": [
+        "www.tryhackme.com"
+    ],
+    "Hidden Content": [
+        {
+            "path": "/robots.txt",
+            "status_code": 200,
+            "content": "User-agent: *\r\nDisallow: /voucher/\r\nDisallow: /r/voucher/\r\nDisallow: /r/path/outline/introtocyber\r\nDisallow: /r/path/outline/beginner\r\n"
+        },
+        {
+            "path": "/sitemap.xml",
+            "status_code": 200,
+            "content": "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"\n  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n  xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemap"
+        }
+    ],
+    "Directories Found": [
+        {
+            "path": "admin",
+            "status_code": 200
+        },
+        {
+            "path": "login",
+            "status_code": 200
+        },
+        {
+            "path": "test",
+            "status_code": 200
+        },
+        {
+            "path": "backup",
+            "status_code": 200
+        },
+        {
+            "path": "config",
+            "status_code": 200
+        },
+        {
+            "path": "tryhackme",
+            "status_code": 200
+        },
+        {
+            "path": "com",
+            "status_code": 200
+        }
+    ],
+    "Headers Analysis": {
+        "headers": {
+            "Date": "Wed, 11 Dec 2024 17:22:00 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "167",
+            "Connection": "keep-alive",
+            "Cache-Control": "max-age=3600",
+            "Expires": "Wed, 11 Dec 2024 18:22:00 GMT",
+            "Location": "https://tryhackme.com/",
+            "Vary": "Accept-Encoding",
+            "Server": "cloudflare",
+            "CF-RAY": "8f072782bab2792f-AMD"
+        },
+        "recommendations": [
+            "Enable HSTS to enforce HTTPS.",
+            "Add a Content Security Policy to prevent XSS attacks.",
+            "Set X-Frame-Options to SAMEORIGIN to prevent clickjacking."
+        ]
+    },
+    "SQL Injection Vulnerabilities": [],
+    "XSS Vulnerabilities": [],
+    "CSRF Vulnerability": {
+        "url": "http://tryhackme.com",
+        "response": "<!DOCTYPE html>\n<html>\n    <head>\n  <title>TryHackMe | Cyber Security Training</title>\n\n  \n  <meta name=\"description\" content=\"TryHackMe is a free online platform for learning cyber security, using ha"
+    },
+    "Path Traversal Vulnerabilities": [
+        {
+            "url": "http://tryhackme.com/../../../../etc/shadow",
+            "payload": "../../../../etc/shadow",
+            "response": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/r/favicon.png\"/><link rel=\"apple-touch-icon\" href=\"/r/THMLogo.png\"/><meta name=\"viewport\" content=\"width=device-widt"
+        },
+        {
+            "url": "http://tryhackme.com/../config.yaml",
+            "payload": "../config.yaml",
+            "response": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"/><link rel=\"icon\" href=\"/r/favicon.png\"/><link rel=\"apple-touch-icon\" href=\"/r/THMLogo.png\"/><meta name=\"viewport\" content=\"width=device-widt"
+        }
+    ],
+    "SSRF Vulnerabilities": [],
+    "Suggestions": [
+        "Add Strict-Transport-Security (HSTS) to enforce HTTPS connections.",
+        "Implement Content Security Policy (CSP) to mitigate XSS attacks.",
+        "Configure X-Frame-Options to prevent clickjacking attacks.",
+        "Validate and sanitize all user inputs to prevent SQL Injection.",
+        "Escape output to mitigate XSS vulnerabilities.",
+        "Use DNSSEC to secure DNS records.",
+        "Restrict access to sensitive API endpoints with authentication.",
+        "Avoid exposing hidden files like robots.txt with sensitive paths.",
+        "Log and monitor server responses for anomaly detection.",
+        "Use rate limiting and CAPTCHA to prevent brute-force attacks."
+    ],
+    "Total Time (seconds)": 15.278318643569946
+}
